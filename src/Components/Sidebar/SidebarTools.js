@@ -16,15 +16,15 @@ class SidebarTools extends Component {
   render() {
     return (
       <ul className="sidebarTools">
-        <li className="btn addNewApplication">
-          <i className="fa fa-plus-square" aria-hidden="true"></i>
-        </li>
         <li className="showMore" onClick={this.handleDisplayTools}>
           <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
         </li>
 
         {this.state.displayTools ? (
           <ul className="ShowMoreTools">
+            <li className="btn addNewApplication">
+              <i className="fa fa-plus-square" aria-hidden="true"></i>
+            </li>
             <li className="btn">
               <i className="fa fa-bell" aria-hidden="true"></i>
             </li>

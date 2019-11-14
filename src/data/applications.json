@@ -3,6 +3,19 @@
     {
       "id": 0,
       "link": "/github",
+      "url": "https://www.github.com",
+      "icon": "fa fa-github-square"
+    },
+    {
+      "id": 1,
+      "link": "/facebook",
+      "url": "https://www.facebook.com",
+      "icon": "fa fa-facebook"
+    },
+    {
+      "id": 2,
+      "link": "/github",
+      "url": "https://littlestar.atlassian.net/",
       "icon": "fa fa-github-square"
     }
   ]

@@ -1,0 +1,14 @@
+{
+  "workspaces": [
+    {
+      "id": 0,
+      "title": "development",
+      "apps": [0]
+    },
+    {
+      "id": 0,
+      "title": "social",
+      "apps": [1]
+    }
+  ]
+}

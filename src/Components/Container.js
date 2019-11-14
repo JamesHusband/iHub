@@ -13,7 +13,10 @@ class Container extends Component {
         <Route exact path="/settings">
           <Page content={<h1>Settings</h1>} />
         </Route>
-        <Route exact path="/github" component={WebApp} />
+
+        <Route path="/app">
+          <WebApp currentApp={this.props.currentApp}></WebApp>
+        </Route>
       </div>
     );
   }

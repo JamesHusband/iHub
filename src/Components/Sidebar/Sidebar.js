@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import SidebarTools from "./SidebarTools";
-const apps = require("../../data/applications.json");
+
 class Sidebar extends Component {
-  state = { items: apps.apps };
+  state = { items: this.props.apps };
 
   render() {
     return (
@@ -18,17 +18,6 @@ class Sidebar extends Component {
               <i className="fa fa-home" aria-hidden="true"></i>
             </li>
           </Link>
-        </ul>
-
-        <ul className="appGroup">
-          {this.state.items.map((item, key) => (
-            <Link to={item.link} key={key}>
-              <li className="btn">
-                <i className={item.icon} aria-hidden="true"></i>
-              </li>
-            </Link>
-          ))}
-
           <li>
             <ul className="folderGroup">
               <li>
@@ -36,6 +25,32 @@ class Sidebar extends Component {
               </li>
             </ul>
           </li>
+        </ul>
+
+        <ul className="appGroup">
+          {this.props.workspace.apps.map((item, key) => (
+            <Link
+              onClick={() =>
+                this.props.updateCurrentApp(this.state.items[item].id)
+              }
+              to="/app"
+              key={key}
+            >
+              <li className="btn">
+                <i
+                  className={this.state.items[item].icon}
+                  aria-hidden="true"
+                ></i>
+              </li>
+            </Link>
+          ))}
+          {/* {this.state.items.map((item, key) => (
+            <Link to={item.link} key={key}>
+              <li className="btn">
+                <i className={item.icon} aria-hidden="true"></i>
+              </li>
+            </Link>
+          ))} */}
 
           <SidebarTools />
         </ul>

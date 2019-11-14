@@ -1,7 +1,7 @@
 {
-  "name": "Electron-Webpack2-React-Sass",
+  "name": "iHub",
   "version": "0.2.0",
-  "author": "Joachim Wendenburg <kgde@wendenburg.de>",
+  "author": "James Husband",
   "main": "main.js",
   "devDependencies": {
     "acorn": "^6.1.1",

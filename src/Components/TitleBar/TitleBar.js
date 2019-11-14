@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import "./TitleBar.scss";
 import WorkspaceSwitcher from "./WorkspaceSwitcher";
-
-const remote = require("electron").remote;
+import { Link } from "react-router-dom";
+// const remote = require("electron").remote;
 
 class TitleBar extends Component {
-  render() {
-    const window = remote.getCurrentWindow();
+  state = {
+    workspaces: this.props.workspaces,
+    currentSpace: this.props.currentSpace
+  };
 
+  render() {
     return (
       <div className="titleBar">
         <ul className="windowControls">
@@ -22,9 +25,20 @@ class TitleBar extends Component {
           </li>
         </ul>
 
-        <WorkspaceSwitcher />
+        <WorkspaceSwitcher
+          workspaces={this.state.workspaces}
+          nextWorkspace={this.props.nextWorkspace}
+          prevWorkspace={this.props.prevWorkspace}
+          currentSpace={this.props.currentSpace}
+        />
 
         <ul className="titleBarTools">
+          <Link onClick={() => this.props.updateCurrentApp(2)} to={`/app`}>
+            <li>
+              <i className="fa fa-ticket" aria-hidden="true"></i>
+            </li>
+          </Link>
+
           <li>
             <i className="fa fa-envelope" aria-hidden="true"></i>
           </li>
