@@ -1,0 +1,102 @@
+.titleBar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  position: relative;
+  width: 100%;
+  background: #484b5c;
+  height: 35px;
+
+  .windowControls {
+    padding: 0 5px 0 0;
+    margin: 0;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    border-right: 1px solid #525568;
+
+    li {
+      display: inline-block;
+      width: 25px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .window-close {
+      color: red;
+    }
+    .window-maximise {
+      color: green;
+    }
+    .window-minimise {
+      color: orange;
+    }
+  }
+
+  .workspaceSwitcher {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 190px;
+    height: 20px;
+    left: 50%;
+    top: 7.5px;
+    margin-left: -90px;
+
+    button {
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      border: 0;
+      cursor: pointer;
+      text-align: center;
+      font-size: 11px;
+      background: #525568;
+      color: #ccc;
+      &.workspacePrev {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &.workspaceNext {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+    input {
+      color: #ccc;
+      background: #525568;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      width: 146px;
+      height: 16px;
+      padding: 2px;
+      border: 0;
+    }
+  }
+
+  .titleBarTools {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+
+    li {
+      color: #9598aa;
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+      border-left: 1px solid #525568;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.25);
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WebView from "react-electron-web-view";
 import "./WebApp.scss";
-const apps = require("../data/applications.json");
+const apps = require("../../data/applications.json");
 
 class WebApp extends Component {
   state = { items: apps.apps };

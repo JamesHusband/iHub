@@ -1,0 +1,20 @@
+.Page {
+  display: block;
+  color: #fff;
+  background: #525568;
+  position: absolute;
+  width: -webkit-calc(100% - 45px);
+  height: -webkit-calc(100% - 35px);
+
+  .page-inner {
+    margin: 50px;
+    padding: 20px 80px;
+  }
+
+  h1 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    padding-right: 150px;
+    width: fit-content;
+  }
+}

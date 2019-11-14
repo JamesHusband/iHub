@@ -1,3 +1,21 @@
 .Container {
-  margin-left: 50px;
+  margin-left: 45px;
+}
+
+.searchBox {
+  width: 500px;
+  background: #353746;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 60px;
+  margin-left: -250px;
+
+  font-size: 20px;
+  border-radius: 25px;
+  border: 0;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  color: #ccc;
 }
