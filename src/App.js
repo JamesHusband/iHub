@@ -15,7 +15,6 @@ class App extends Component {
     workspaces: workspaces.workspaces,
     applications: apps.apps,
     currentSpace: 0,
-
     currentApp: 0
   };
 
